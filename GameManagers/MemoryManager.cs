@@ -122,8 +122,6 @@ namespace MyEldenRing.GameManagers
             if (hProcess == nint.Zero)
                 return false;
 
-            // TODO : convert AOB to byte array
-
             nint currentAddress = baseAddress;
             while (VirtualQueryEx(hProcess, currentAddress, out MEMORY_BASIC_INFORMATION info,
                                     Marshal.SizeOf(typeof(MEMORY_BASIC_INFORMATION))))
